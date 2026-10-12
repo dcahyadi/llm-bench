@@ -31,7 +31,7 @@ Results are listed alphabetically by model, with one row per model and quantizat
 - GGUF file size is not total runtime memory. KV cache, compute buffers, runtime allocations, and the OS require additional memory.
 - Throughput does not measure reasoning quality, coding correctness, factuality, instruction following, or multilingual performance.
 
-## Results — prompt processing (`pp512`, tokens/s)
+## Results: prompt processing (`pp512`, tokens/s)
 
 Each row is one model + quantization. NGL settings are separate columns so the same configuration can be compared across offload levels.
 
@@ -60,7 +60,7 @@ Each row is one model + quantization. NGL settings are separate columns so the s
 | Qwen3.6 35B-A3B MTP-named | MoE | Q6_K | 27.94 GiB | 35.51 B | 163.89 ± 0.53 | 141.90 ± 0.43 | 97.98 ± 1.02 | 75.70 ± 0.28 |
 | Qwen3.8 27B | Dense | Q4_K_XL | 16.34 GiB | 27.32 B | 101.68 ± 1.58 | 66.83 ± 1.45 | 57.47 ± 0.39 | 51.76 ± 0.23 |
 
-## Results — generation (`tg128`, tokens/s)
+## Results: generation (`tg128`, tokens/s)
 
 | Model | Type | Quantization | GGUF size | Params | NGL 999 | NGL 40 | NGL 30 | NGL 20 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
@@ -86,6 +86,27 @@ Each row is one model + quantization. NGL settings are separate columns so the s
 | Qwen3.6 35B-A3B MTP-named | MoE | Q4_K_XL | 21.27 GiB | 35.51 B | 15.52 ± 0.12 | 14.23 ± 0.04 | 13.12 ± 0.05 | 12.39 ± 0.02 |
 | Qwen3.6 35B-A3B MTP-named | MoE | Q6_K | 27.94 GiB | 35.51 B | 10.52 ± 0.01 | 13.57 ± 0.02 | 12.55 ± 0.05 | 11.86 ± 0.04 |
 | Qwen3.8 27B | Dense | Q4_K_XL | 16.34 GiB | 27.32 B | 3.39 ± 0.00 | 2.51 ± 0.02 | 2.27 ± 0.02 | 2.07 ± 0.01 |
+
+## Model Sources
+
+This document records the original Hugging Face repositories for models
+used in the llama.cpp SYCL benchmark.
+
+| Model | Hugging Face Repository | Quantizations Tested |
+|---|---|---|
+| Gemma 4 12B | [Unsloth](https://huggingface.co/unsloth/gemma-4-12b-it-GGUF) | Q4_K_M, Q6_K |
+| Gemma 4 26B A4B | [Unsloth](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF) | Q4_K_XL |
+| Gemma 4 E4B | [Unsloth](https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF) | Q4_K_XL, Q6_K_XL, Q8_K_XL |
+| GLM-4.7-Flash | [Unsloth](https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF) | Q4_K_XL |
+| GPT-OSS 20B | [Unsloth](https://huggingface.co/unsloth/gpt-oss-20b-GGUF) | Q4_K_M, Q4_K_XL, Q5_K_M, Q6_K_XL |
+| NVIDIA Nemotron 3.5 Lightning 30B-A3B | [Unsloth](https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF) | Q4_K_XL, Q5_K_M |
+| Qwen3-Coder 30B-A3B Instruct | [Unsloth](https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF) | Q4_K_XL |
+| Qwen3.5 4B | [Unsloth](https://huggingface.co/unsloth/Qwen3.5-4B-GGUF) | Q6_K_XL |
+| Qwen3.5 9B | [Unsloth](https://huggingface.co/unsloth/Qwen3.5-9B-GGUF) | Q6_K_XL |
+| Qwen3.6 35B-A3B | [Unsloth](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF) | Q4_K_M, Q5_K_M, Q6_K |
+| Qwen3.8 27B | [Unsloth](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF) | Q4_K_XL |
+
+**Note:** These links are repository from HuggingFace.
 
 ## Reproducibility
 
