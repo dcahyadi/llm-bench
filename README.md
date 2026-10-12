@@ -106,7 +106,7 @@ used in the llama.cpp SYCL benchmark.
 | Qwen3.6 35B-A3B | [Unsloth](https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF) | Q4_K_M, Q5_K_M, Q6_K |
 | Qwen3.8 27B | [Unsloth](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF) | Q4_K_XL |
 
-**Note:** These links are repository from HuggingFace.
+**Note:** These links are repository from HuggingFace. For all Unsloth models: [unsloth-model-catalog](https://unsloth.ai/docs/get-started/unsloth-model-catalog)
 
 ## Reproducibility
 
