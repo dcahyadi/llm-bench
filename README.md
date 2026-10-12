@@ -4,7 +4,7 @@
 **Backend:** SYCL / Level Zero  
 **llama.cpp:** `0.6.0-dev` · build `11429` · commit `d81235049`
 
-This README reports the October 12, 2026 benchmark run only. Results are listed alphabetically by model, with one row per model and quantization. No ranking or previous-run comparison is included.
+Results are listed alphabetically by model, with one row per model and quantization.
 
 ## Test system
 
